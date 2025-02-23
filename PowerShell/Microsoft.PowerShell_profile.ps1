@@ -260,3 +260,5 @@ function Get-MyFunctions {
     $output | Format-Table -AutoSize
 }
 New-Alias -Name mf -Value Get-MyFunctions
+
+oh-my-posh init pwsh | Invoke-Expression

@@ -243,7 +243,6 @@ New-Alias -Name gra -Value Get-GitRemoteAdd -Force -Option AllScope
 
 function pn { pnpm @args }
 
-
 function Get-MyFunctions {
     $userAliases = gci alias: | where { $sysaliases -notcontains $_ }
     $userFunctions = gci function: | where { $sysfunctions -notcontains $_ }
@@ -261,3 +260,6 @@ function Get-MyFunctions {
     $output | Format-Table -AutoSize
 }
 New-Alias -Name mf -Value Get-MyFunctions
+
+
+oh-my-posh init pwsh | Invoke-Expression
