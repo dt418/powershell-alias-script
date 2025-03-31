@@ -259,6 +259,9 @@ function Get-MyFunctions {
 
     $output | Format-Table -AutoSize
 }
-New-Alias -Name mf -Value Get-MyFunctions
+
+New-Alias -Name mf -Value Get-MyFunctions -Force -Option AllScope
 
 oh-my-posh init pwsh | Invoke-Expression
+
+Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
